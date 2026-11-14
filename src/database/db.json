@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 16 Pro",
+    "category": "Electronics",
+    "price": 125000,
+    "brand": "Apple",
+    "stock": 15,
+    "rating": 4.9,
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S25",
+    "category": "Electronics",
+    "price": 110000,
+    "brand": "Samsung",
+    "stock": 20,
+    "rating": 4.8,
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Nike Air Max 270",
+    "category": "Fashion",
+    "price": 12500,
+    "brand": "Nike",
+    "stock": 8,
+    "rating": 4.6,
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Sony WH-1000XM5",
+    "category": "Accessories",
+    "price": 32000,
+    "brand": "Sony",
+    "stock": 0,
+    "rating": 4.9,
+    "inStock": false
+  },
+  {
+    "id": 5,
+    "name": "Logitech MX Master 3S",
+    "category": "Computer Accessories",
+    "price": 11500,
+    "brand": "Logitech",
+    "stock": 12,
+    "rating": 4.7,
+    "inStock": true
+  }
+]
