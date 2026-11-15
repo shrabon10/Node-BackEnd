@@ -1,8 +1,9 @@
 import type { IncomingMessage, ServerResponse } from "http";
 import productService from "../service/product.service";
 import type { IProduct } from "../types/product";
+import { bodyParse } from "../utils/parseBody";
 
-const productController = (req:IncomingMessage, res:ServerResponse) =>{
+const productController = async (req:IncomingMessage, res:ServerResponse) =>{
 
     const url = req.url
     const method = req.method
@@ -41,6 +42,8 @@ const productController = (req:IncomingMessage, res:ServerResponse) =>{
         }))
     }else if(method === "POST" && url === "/products"){
 
+        const doby = await bodyParse(req)
+        console.log(doby);
         
 
 
@@ -52,6 +55,20 @@ const productController = (req:IncomingMessage, res:ServerResponse) =>{
             // data : product,
         }))
 
+    } else if (method === "DELET" && id !== null){
+            const products = productService()
+        const index = products.findIndex((p: IProduct )=> p.id === id)
+
+        if (index < 0){
+            res.writeHead(404,{
+            "content-type": "application/json"
+        })
+        res.end(JSON.stringify({massage: "succefully Data Delet",
+            // data : product,
+        }))
+
+
+        }
     }
 
     
